@@ -1,0 +1,12 @@
+# Docker Compose file Reference (https://docs.docker.com/compose/compose-file/)
+version: "3"
+services:
+  # App Service
+  http_server:
+    container_name: http_server_example
+    build:
+      context: ./
+      dockerfile: dockerfile
+    ports:
+      - "6547:6547"
+    restart: unless-stopped
